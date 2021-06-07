@@ -6,3 +6,6 @@
 
 # Error note:
 1. Be confident - what I believe is mostly correct. className is exactly what React suppose to indicate class.
+
+# Tip (this is not an error!)
+1. When I input console.log(), be always sure to input some value first. Then open up that collapsed log on the browser's console. Then the list will appear to go detail.
