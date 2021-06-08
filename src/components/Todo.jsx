@@ -3,7 +3,8 @@ import React from 'react'
 const Todo = ({ text, todo, toDos, setToDos }) => {
     // Events
     const deleteHandler = () => {
-        setToDos(toDos.filter(el => el.id !== todo.id)); // el = element
+       // setToDos(toDos.filter(el => el.id !== todo.id)); // el = element
+       console.log(todo);
     };
     return (
         <div className="todo">
