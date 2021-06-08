@@ -38,12 +38,7 @@ function App() {
   };
   //save to local storage
   const saveLocalToDos = () => {
-    if(localStorage.getItems("toDos") === null) {
-      localStorage.setItem("toDos", JSON.stringify([]));
-    } else {
-      let todoLocal = localStorage.getItem("toDos", JSON.stringify(toDos));
-      setToDos(todoLocal);
-    }
+    localStorage.setItem("toDos", JSON.stringify([toDos]));
   };
   const getLocalToDos = () => {
     if (localStorage.getItem("toDos") === null) {
