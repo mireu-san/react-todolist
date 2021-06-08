@@ -17,9 +17,11 @@ function App() {
   useEffect(() => {
     getLocalToDos();
   }, []);
+  
   //useEffect
   useEffect(() => {
     filterHandler();
+    saveLocalToDos();
   }, [toDos, status]);
 
   // functions
@@ -38,8 +40,13 @@ function App() {
   };
   //save to local storage
   const saveLocalToDos = () => {
-    localStorage.setItem("toDos", JSON.stringify([toDos]));
+    if (localStorage.getItem("toDos") === null) {
+      localStorage.setItem("toDos", JSON.stringify([]));
+    } else {
+      localStorage.setItem("toDos", JSON.stringify(toDos));
+    }
   };
+
   const getLocalToDos = () => {
     if (localStorage.getItem("toDos") === null) {
       localStorage.setItem("toDos", JSON.stringify([]));
