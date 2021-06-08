@@ -9,13 +9,13 @@ function App() {
   //useEffect
   useEffect(() => {
     filterHandler();
-  }, [toDos]);
+  }, [toDos, status]);
 
   //state
   const [ inputText, setInputText ] = useState("");
   const [ toDos, setToDos ] = useState([]);
   const [ status, setStatus] = useState("all"); //default
-  const [ filterdToDos, setFilteredToDos ] = useState([]);
+  const [ filteredToDos, setFilteredToDos ] = useState([]);
   // functions
   const filterHandler = () => {
     switch(status){
@@ -29,7 +29,7 @@ function App() {
         setFilteredToDos(toDos);
         break;
     }
-  }
+  };
   return (
     <div className="App">
       <header>
@@ -43,6 +43,7 @@ function App() {
           setStatus={setStatus}
         />
         <ToDoList 
+          filteredToDos={filteredToDos}
           setToDos={setToDos} 
           toDos={toDos} 
         />
