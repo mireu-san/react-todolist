@@ -39,7 +39,7 @@ function App() {
     } else {
       localStorage.setItem("toDos", JSON.stringify(toDos));
     }
-  }
+  };
 
 
   return (
