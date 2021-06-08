@@ -3,6 +3,7 @@ import React from "react";
 import Todo from "./Todo";
 
 const ToDoList = ({ toDos, setToDos, filteredToDos }) => {
+    console.log(filteredToDos);
     return (
         <div className="todo-container">
             <ul className="todo-list">

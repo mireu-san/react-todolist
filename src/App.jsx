@@ -6,16 +6,18 @@ import Todo from "./components/Todo";
 import ToDoList from "./components/ToDoList";
 
 function App() {
-  //useEffect
-  useEffect(() => {
-    filterHandler();
-  }, [toDos, status]);
-
+  
   //state
   const [ inputText, setInputText ] = useState("");
   const [ toDos, setToDos ] = useState([]);
   const [ status, setStatus] = useState("all"); //default
   const [ filteredToDos, setFilteredToDos ] = useState([]);
+
+  //useEffect
+  useEffect(() => {
+    filterHandler();
+  }, [toDos, status]);
+
   // functions
   const filterHandler = () => {
     switch(status){
