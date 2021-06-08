@@ -15,9 +15,13 @@ function App() {
         <Form 
           inputText={inputText}
           toDos={toDos} 
+          setToDos={setToDos}
+          setInputText={setInputText}
+        />
+        <ToDoList 
           setToDos={setToDos} 
-          setInputText={setInputText}/>
-        <ToDoList toDos={toDos} />
+          toDos={toDos} 
+        />
     </div>
   );
 }
