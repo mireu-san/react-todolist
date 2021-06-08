@@ -40,18 +40,19 @@ function App() {
   };
   //save to local storage
   const saveLocalToDos = () => {
-    if (localStorage.getItem("toDos") === null) {
-      localStorage.setItem("toDos", JSON.stringify([]));
-    } else {
+    //if (localStorage.getItem("toDos") === null) {
+   //   localStorage.setItem("toDos", JSON.stringify([]));
+   // } else {
       localStorage.setItem("toDos", JSON.stringify(toDos));
-    }
+   // }
   };
 
   const getLocalToDos = () => {
     if (localStorage.getItem("toDos") === null) {
       localStorage.setItem("toDos", JSON.stringify([]));
     } else {
-      localStorage.setItem("toDos", JSON.stringify(toDos));
+      let toDoLocal = JSON.parse(localStorage.getItem("toDos"));
+      setToDos(toDoLocal);
     }
   };
 
