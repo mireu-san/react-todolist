@@ -9,3 +9,6 @@
 
 # Tip (this is not an error!)
 1. When I input console.log(), be always sure to input some value first. Then open up that collapsed log on the browser's console. Then the list will appear to go detail.
+
+# Additional plan
+- add up the feature : let the page to save as an image

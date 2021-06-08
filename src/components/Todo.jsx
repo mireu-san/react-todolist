@@ -9,7 +9,7 @@ const Todo = ({ text, toDos, setToDos }) => {
             <button className="complete-btn">
                 <i className="fas fa-check"></i>
             </button>
-            <button className="trash-btn">
+            <button onClick={deleteHandler} className="trash-btn">
                 <i className="fas fa-trash"></i>
             </button>
         </div>
