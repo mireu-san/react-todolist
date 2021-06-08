@@ -7,7 +7,7 @@ const ToDoList = ({ toDos }) => {
         <div className="todo-container">
             <ul className="todo-list">
                 {toDos.map(todo => (
-                    <Todo />
+                    <Todo text={todo.text} /> // rendering Todo from Todo.jsx 
                 ))}
             </ul>
         </div>
