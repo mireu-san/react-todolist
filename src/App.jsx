@@ -32,6 +32,16 @@ function App() {
         break;
     }
   };
+  //save to local storage
+  const saveLocalToDos = () => {
+    if(localStorage.getItems("toDos") ===null) {
+      localStorage.setItem("toDos", JSON.stringify([]));
+    } else {
+      localStorage.setItem("toDos", JSON.stringify(toDos));
+    }
+  }
+
+
   return (
     <div className="App">
       <header>
